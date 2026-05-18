@@ -1,0 +1,89 @@
+.dotCard {
+  border: none;
+  border-radius: 12px;
+  grid-column: span 2;
+  height: auto;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 16px;
+  box-shadow:
+    rgba(0, 0, 0, 0.08) 0px 0.602187px 0.602187px -0.916667px,
+    rgba(0, 0, 0, 0.08) 0px 2.28853px 2.28853px -1.83333px,
+    rgba(0, 0, 0, 0.07) 0px 10px 10px -2.75px;
+  opacity: 1;
+
+  .imageAndDot,
+  .linkText,
+  .headingSmallText {
+    padding: 20px;
+  }
+
+  .imageAndDot {
+    display: flex;
+    justify-content: space-between;
+
+    .dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #e5e5e5;
+      transition: 0.3s ease;
+    }
+
+    .active {
+      background: #e3392d;
+    }
+  }
+
+  .linkText,
+  .headingSmallText {
+    flex-flow: flex column;
+    gap: 10px;
+    width: 100%;
+    height: min-content;
+    padding: 20px;
+
+    h3 {
+      font-size: 20.8px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      word-wrap: break-word;
+      width: 100%;
+    }
+
+    p {
+      font-size: 16px;
+      max-width: 400px;
+    }
+  }
+
+  .headingSmallText {
+    margin-top: 30px;
+
+    p {
+      padding-top: 1rem;
+      color: #707070;
+      font-weight: 500;
+    }
+  }
+
+  .linkText {
+    h3 {
+      font-size: 14px;
+      color: #707070;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: 550;
+    }
+  }
+}

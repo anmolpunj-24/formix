@@ -1,0 +1,36 @@
+.sectionHeading {
+  display: flex;
+  flex-direction: var(--position);
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .sectionH2 {
+    font-size: var(--fontSize);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 64px;
+    letter-spacing: -0.055em;
+  }
+
+  .headingDiv {
+    font-size: 72px;
+    font-weight: 600;
+    font-family: "Inter", "Inter Placeholder", sans-serif;
+    text-transform: capitalize;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+    max-width: 535px;
+    padding-bottom: 20px;
+
+    span {
+      color: rgb(79, 79, 79);
+    }
+  }
+
+  .sectionP {
+    font-size: 17.6px;
+    max-width: 350px;
+    color: #707070;
+    font-weight: 540;
+  }
+}
