@@ -29,30 +29,24 @@ a {
   text-decoration: none;
 }
 
-.sectionsWrapper {
-  padding: 0 40px;
-
-  .section {
-    border-color: #00000026;
-    border-style: dashed;
-    border-width: 0.7px;
-    flex-flow: column;
-    flex: none;
-    width: 100%;
-    height: min-content;
-    padding: 0 8px;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    border-top: none;
-
-    .sectionDiv {
-      padding: 100px 40px;
-    }
-  }
+div.sectionDiv {
+  border: #00000041 1px dashed;
+  flex-flow: column;
+  width: 100%;
+  height: min-content;
+  padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
+  border-top: none;
+  display: flex;
 }
 
 .contactDiv {
   display: flex;
   flex-direction: row !important;
+}
+
+.faqDiv{
+  align-items: center;
+  text-align: center;
 }

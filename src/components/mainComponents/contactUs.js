@@ -9,15 +9,14 @@ import styles from "../../styles/contact.module.scss";
 
 export default function ContactUs() {
   return (
-    <section className="section contactDiv">
-      <div className="sectionDiv" style={{minWidth:"50%"}}>
+    <div className="sectionDiv contactDiv">
+      <div style={{ minWidth: "50%" }}>
         <SectionTag tagName="Contact" />
         <SectionHeading
           heading="Let's talk"
           smallHeading="Got questions or ready to start your design project? Let’s bring your ideas to life!"
           position="column"
         />
-
         <div className={styles.dataDiv}>
           {Array.from({ length: 2 }).map((_, index) => (
             <DataCardWithDots
@@ -34,6 +33,6 @@ export default function ContactUs() {
       </div>
 
       <GetInTouchForm />
-    </section>
+    </div>
   );
 }

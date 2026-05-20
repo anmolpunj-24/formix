@@ -6,10 +6,9 @@ import Image from "next/image";
 
 export default function Marquee() {
   return (
-    <section className="section">
-      <div className="sectionDiv">
-        <h3>Worked with: </h3>
-        {/* <div className={styles.marqueeImage}>
+    <div className="sectionDiv">
+      <h3>Worked with: </h3>
+      {/* <div className={styles.marqueeImage}>
           {Array.from({ length: 10 }).map((_, index) => (
             <Image
               src="/assets/aven.avif"
@@ -19,7 +18,6 @@ export default function Marquee() {
             />
           ))}
         </div> */}
-      </div>
-    </section>
+    </div>
   );
 }

@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <div id="smooth-wrapper" ref={appRef}>
-      <div id="smooth-content">
+      <div id="smooth-content" style={{ padding: "0 40px" }}>
         <Component {...pageProps} />
       </div>
     </div>

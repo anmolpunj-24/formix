@@ -1,0 +1,79 @@
+.imgContainer {
+  cursor: pointer;
+  width: min-content;
+  position: relative;
+  margin-bottom: 3rem;
+
+  .fileImage {
+    filter: brightness(0);
+    position: relative;
+  }
+
+  .fileFront {
+    border: 2px solid rgb(55, 55, 55);
+    border-radius: 3px;
+    width: 65px;
+    height: 35px;
+    transition: height 0.3s ease;
+    position: absolute;
+    bottom: 4px;
+    z-index: 3;
+    background-color: black;
+  }
+
+  .images {
+    .fileImage1,
+    .fileImage2,
+    .fileImage3 {
+      height: 40;
+      width: 48px;
+      object-fit: cover;
+      position: absolute;
+      bottom: 47px;
+      border-radius: 3px;
+    }
+
+    .fileImage1 {
+      box-shadow: rgba(92, 92, 92, 0) 0px 0px 0px 0px;
+      transform: translate(31%, 98%) rotate(6deg);
+      transform-origin: 50% 50% 0px;
+      will-change: transform;
+      transition: transform 0.3s ease-in-out;
+      z-index: 1;
+    }
+    .fileImage2 {
+      box-shadow: rgba(92, 92, 92, 0) 0px 0px 0px 0px;
+      transform: translate(13%, 102%) rotate(-4deg);
+      transform-origin: 50% 50% 0px;
+      will-change: transform;
+      transition: transform 0.3s ease-in-out;
+      z-index: 2;
+    }
+    .fileImage3 {
+      box-shadow: rgba(51, 51, 51, 0) 0px 0px 0px 0px;
+      transform: translate(0%, 92%);
+      transform-origin: 50% 50% 0px;
+      will-change: transform;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &:hover .fileFront {
+    height: 18px;
+  }
+
+  &:hover .fileImage1 {
+    transform: translate(10%, 30%) rotate(-1deg);
+    box-shadow: rgba(164, 164, 164, 0.34) 0px 3px 6px 0px;
+  }
+
+  &:hover .fileImage2 {
+    transform: translate(56%, 40%) rotate(10deg);
+    box-shadow: rgba(164, 164, 164, 0.34) 0px 3px 6px 0px;
+  }
+
+  &:hover .fileImage3 {
+    transform: translate(-28%, 45%) rotate(-14deg);
+    box-shadow: rgba(164, 164, 164, 0.34) 0px 3px 6px 0px;
+  }
+}
