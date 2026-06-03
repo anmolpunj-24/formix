@@ -12,8 +12,6 @@ jobs:
       image: node:24
     steps:
       - uses: actions/checkout@v3
-        with:
-          node-version: 24
       - run: npm ci
       - run: npm test
       - run: npm run build
