@@ -1,7 +1,7 @@
 // components import
-import DataCardWithDots from "@/components/dataCardWithDots";
-import SectionTag from "@/components/sectionTag";
-import SectionHeading from "@/components/sectionHeading";
+import DataCardWithDots from "../dataCardWithDots";
+import SectionTag from "../sectionTag";
+import SectionHeading from "../sectionHeading";
 
 // styles import
 import styles from "../../styles/benifits.module.scss";
