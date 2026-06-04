@@ -1,7 +1,7 @@
 // components import
 import CardWithCArouselAndTAg from "../cardWithCarouselAndTag";
-import SectionTag from "@/components/sectionTag";
-import SectionHeading from "@/components/sectionHeading";
+import SectionTag from "../sectionTag";
+import SectionHeading from "../sectionHeading";
 
 // styles import
 import styles from "../../styles/services.module.scss";

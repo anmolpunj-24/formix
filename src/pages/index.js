@@ -1,18 +1,18 @@
 // component import
-import SectionTag from "@/components/sectionTag";
-import SectionHeading from "@/components/sectionHeading";
-import Seo from "@/components/seo";
-import Benifits from "@/components/mainComponents/benifits";
-import SelectedWork from "@/components/mainComponents/selectedWork";
-import ProjectsAvail from "@/components/mainComponents/projectsAvail";
-import ContactUs from "@/components/mainComponents/contactUs";
-import Marquee from "@/components/mainComponents/marquee";
-import Footer from "@/components/mainComponents/footer";
-import ImageCarousel from "@/components/imageCarousel";
-import FileExpandOnHover from "@/components/fileExpandOnHover";
-import Services from "@/components/mainComponents/services";
-import Review from "@/components/mainComponents/review";
-import Faqs from "@/components/mainComponents/faqs";
+import SectionTag from "../components/sectionTag";
+import SectionHeading from "../components/sectionHeading";
+import Seo from "../components/seo";
+import Benifits from "../components/mainComponents/benifits";
+import SelectedWork from "../components/mainComponents/selectedWork";
+import ProjectsAvail from "../components/mainComponents/projectsAvail";
+import ContactUs from "../components/mainComponents/contactUs";
+import Marquee from "../components/mainComponents/marquee";
+import Footer from "../components/mainComponents/footer";
+import ImageCarousel from "../components/imageCarousel";
+import FileExpandOnHover from "../components/fileExpandOnHover";
+import Services from "../components/mainComponents/services";
+import Review from "../components/mainComponents/review";
+import Faqs from "../components/mainComponents/faqs";
 
 export default function Home() {
   return (

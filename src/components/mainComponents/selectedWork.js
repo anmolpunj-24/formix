@@ -1,6 +1,6 @@
 // components import
-import SectionTag from "@/components/sectionTag";
-import SectionHeading from "@/components/sectionHeading";
+import SectionTag from "../sectionTag";
+import SectionHeading from "../sectionHeading";
 import BigCardsWithLinks from "../bigCardsWithLinks";
 
 // styles import

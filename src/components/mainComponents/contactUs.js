@@ -1,7 +1,7 @@
 // components import
 import GetInTouchForm from "../getInTouchForm";
-import SectionTag from "@/components/sectionTag";
-import SectionHeading from "@/components/sectionHeading";
+import SectionTag from "../sectionTag";
+import SectionHeading from "../sectionHeading";
 import DataCardWithDots from "../dataCardWithDots";
 
 // styles import
