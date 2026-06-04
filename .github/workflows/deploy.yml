@@ -24,4 +24,4 @@ jobs:
           scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r .next public package.json package-lock.json next.config.mjs ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/node-app
       - name: Restart Server
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ~/node-app && npm ci && pm2 restart formix"
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ~/node-app && npm ci && npm run build && pm2 restart formix"
