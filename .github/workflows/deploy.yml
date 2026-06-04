@@ -11,8 +11,17 @@ jobs:
     container:
       image: node:24
     steps:
-        - uses: actions/checkout@v4
-        - run: npm ci
-        - run: npm run build
-
-
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run build
+      - name: Get SSH Key and set permissions
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+      - name: Deploy Project
+        run: |
+          scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r .next public package.json package-lock.json next.config.mjs ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/node-app
+      - name: Restart Server
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ~/node-app && npm ci && pm2 restart formix"
