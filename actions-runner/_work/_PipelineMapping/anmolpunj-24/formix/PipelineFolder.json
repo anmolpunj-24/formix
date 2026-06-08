@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "anmolpunj-24/formix",
+  "pipelineDirectory": "formix",
+  "workspaceDirectory": "formix\\formix",
+  "repositories": {
+    "anmolpunj-24/formix": {
+      "repositoryPath": "formix\\formix",
+      "lastRunOn": "06/08/2026 19:23:38 +05:30"
+    }
+  },
+  "lastRunOn": "06/08/2026 19:23:38 +05:30"
+}

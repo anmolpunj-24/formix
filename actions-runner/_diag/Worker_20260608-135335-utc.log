@@ -1,0 +1,3927 @@
+[2026-06-08 13:53:35Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-06-08 13:53:35Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:35Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:35Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\anmol\Documents\formix\actions-runner\.credentials'
+[2026-06-08 13:53:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:36Z INFO HostContext] Well known config file 'Runner': 'C:\Users\anmol\Documents\formix\actions-runner\.runner'
+[2026-06-08 13:53:36Z INFO Worker] Version: 2.334.0
+[2026-06-08 13:53:36Z INFO Worker] Commit: f1995ede5d885c997d13d8eca5467c4ce97fe69c
+[2026-06-08 13:53:36Z INFO Worker] Culture: en-IN
+[2026-06-08 13:53:36Z INFO Worker] UI Culture: en-US
+[2026-06-08 13:53:36Z INFO Worker] Waiting to receive the job message from the channel.
+[2026-06-08 13:53:36Z INFO ProcessChannel] Receiving message of length 22897, with hash 'abffd7dabdb4cdba6acb570ce39bbd0cc8f43549b5e737963e67e205f5b71d8a'
+[2026-06-08 13:53:36Z INFO Worker] Message received.
+[2026-06-08 13:53:37Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/deploy.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v4",
+        "repositoryType": "GitHub"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 71,
+        "col": 15,
+        "lit": "Install Dependencies"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 72,
+              "col": 14,
+              "lit": "npm ci"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "0724bc0b-f391-474c-b007-6d1474fccfdc",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 74,
+        "col": 15,
+        "lit": "Build"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 75,
+              "col": 14,
+              "lit": "npm run build"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "84dad650-be6f-47ed-b5b8-fbc39fe577e1",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 77,
+        "col": 15,
+        "lit": "Restart PM2"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 78,
+              "col": 14,
+              "lit": "pm2 restart formix"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "bd6fceb9-73f6-40eb-8697-7c0d81142858",
+      "name": "__run_3"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions.runner.requirenode24": {
+      "value": "false"
+    },
+    "actions.runner.usenode24bydefault": {
+      "value": "false"
+    },
+    "actions.runner.warnonnode20": {
+      "value": "true"
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "true"
+    },
+    "actions_batch_action_resolution": {
+      "value": "false"
+    },
+    "actions_container_action_runner_temp": {
+      "value": "true"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "true"
+    },
+    "actions_runner_compare_workflow_parser": {
+      "value": "false"
+    },
+    "actions_runner_deprecate_linux_arm32": {
+      "value": "false"
+    },
+    "actions_runner_emit_composite_markers": {
+      "value": "false"
+    },
+    "actions_runner_kill_linux_arm32": {
+      "value": "false"
+    },
+    "actions_runner_node20_removal_date": {
+      "value": ""
+    },
+    "actions_runner_node24_default_date": {
+      "value": "June 16th, 2026"
+    },
+    "actions_service_container_command": {
+      "value": "true"
+    },
+    "actions_set_orchestration_id_env_for_actions": {
+      "value": "true"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_snapshot_preflight_hosted_runner_check": {
+      "value": "false"
+    },
+    "actions_snapshot_preflight_image_gen_pool_check": {
+      "value": "false"
+    },
+    "actions_use_bearer_token_for_codeload": {
+      "value": "false"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "deploy"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "b2fe93fd-21d8-4ac1-8a14-f7759c67404b.deploy.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "deploy"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "b2fe93fd-21d8-4ac1-8a14-f7759c67404b",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "b2fe93fd-21d8-4ac1-8a14-f7759c67404b",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "f29d1e27-4b4a-59e4-b30f-20fdcac90d89",
+  "jobDisplayName": "deploy",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/DFlBhBxhWQ3wssyL8kPGmh4L1I5JyHrPMtxTV6XEyKF60mQIxQ/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus22.actions.githubusercontent.com/DFlBhBxhWQ3wssyL8kPGmh4L1I5JyHrPMtxTV6XEyKF60mQIxQ/",
+          "GenerateIdTokenUrl": "",
+          "ConnectivityChecks": "[\"https://broker.actions.githubusercontent.com/health\",\"https://token.actions.githubusercontent.com/ready\",\"https://run.actions.githubusercontent.com/health\"]"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-1-azure-eastus.actions.githubusercontent.com/93/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/master"
+        },
+        {
+          "k": "sha",
+          "v": "96780f2200aa07a29c47b6c97c9a0508867e7f3b"
+        },
+        {
+          "k": "repository",
+          "v": "anmolpunj-24/formix"
+        },
+        {
+          "k": "repository_owner",
+          "v": "anmolpunj-24"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "100954180"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/anmolpunj-24/formix.git"
+        },
+        {
+          "k": "run_id",
+          "v": "27142490676"
+        },
+        {
+          "k": "run_number",
+          "v": "5"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "private"
+        },
+        {
+          "k": "actor_id",
+          "v": "100954180"
+        },
+        {
+          "k": "actor",
+          "v": "anmolpunj-24"
+        },
+        {
+          "k": "workflow",
+          "v": "Deploy Project"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "master"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "96780f2200aa07a29c47b6c97c9a0508867e7f3b"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "5997066000a94712ee32edc873e9bae6877add14"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "anmolpunj24@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "anmolpunj-24"
+                              },
+                              {
+                                "k": "username",
+                                "v": "anmolpunj-24"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "anmolpunj24@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "anmolpunj-24"
+                              },
+                              {
+                                "k": "username",
+                                "v": "anmolpunj-24"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": false
+                        },
+                        {
+                          "k": "id",
+                          "v": "1872d5ca25fc4d1b27c0207eb5a763c98193f34e"
+                        },
+                        {
+                          "k": "message",
+                          "v": "setup self hosted runner"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2026-06-08T19:18:25+05:30"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "4983d96ed2078422a4b1a30d56b2b2b452fb8df7"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/anmolpunj-24/formix/commit/1872d5ca25fc4d1b27c0207eb5a763c98193f34e"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "anmolpunj24@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "anmolpunj-24"
+                              },
+                              {
+                                "k": "username",
+                                "v": "anmolpunj-24"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "noreply@github.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "GitHub"
+                              },
+                              {
+                                "k": "username",
+                                "v": "web-flow"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "96780f2200aa07a29c47b6c97c9a0508867e7f3b"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Merge pull request #5 from anmolpunj-24/test\n\nsetup self hosted runner"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2026-06-08T19:23:18+05:30"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "4983d96ed2078422a4b1a30d56b2b2b452fb8df7"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/anmolpunj-24/formix/commit/96780f2200aa07a29c47b6c97c9a0508867e7f3b"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/anmolpunj-24/formix/compare/5997066000a9...96780f2200aa"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "anmolpunj24@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "anmolpunj-24"
+                          },
+                          {
+                            "k": "username",
+                            "v": "anmolpunj-24"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "noreply@github.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "GitHub"
+                          },
+                          {
+                            "k": "username",
+                            "v": "web-flow"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "96780f2200aa07a29c47b6c97c9a0508867e7f3b"
+                    },
+                    {
+                      "k": "message",
+                      "v": "Merge pull request #5 from anmolpunj-24/test\n\nsetup self hosted runner"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2026-06-08T19:23:18+05:30"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "4983d96ed2078422a4b1a30d56b2b2b452fb8df7"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/anmolpunj-24/formix/commit/96780f2200aa07a29c47b6c97c9a0508867e7f3b"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "anmolpunj24@gmail.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "anmolpunj-24"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/master"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/anmolpunj-24/formix.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1778234410.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "anmolpunj-24/formix"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/anmolpunj-24/formix.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pull_requests",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": false
+                    },
+                    {
+                      "k": "homepage",
+                      "v": "https://formix-henna.vercel.app"
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/anmolpunj-24/formix"
+                    },
+                    {
+                      "k": "id",
+                      "v": 1232821491.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "formix"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOSXtc8w"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/100954180?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "anmolpunj24@gmail.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/anmolpunj-24/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/anmolpunj-24/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/anmolpunj-24/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/anmolpunj-24/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/anmolpunj-24"
+                          },
+                          {
+                            "k": "id",
+                            "v": 100954180.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "anmolpunj-24"
+                          },
+                          {
+                            "k": "name",
+                            "v": "anmolpunj-24"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOBgRwRA"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/anmolpunj-24/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/anmolpunj-24/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/anmolpunj-24/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/anmolpunj-24/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/anmolpunj-24/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/anmolpunj-24"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": true
+                    },
+                    {
+                      "k": "pull_request_creation_policy",
+                      "v": "all"
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1780926798.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 283.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:anmolpunj-24/formix.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/anmolpunj-24/formix"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2026-06-08T10:43:57Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/anmolpunj-24/formix"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "private"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/100954180?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/anmolpunj-24/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/anmolpunj-24/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/anmolpunj-24/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/anmolpunj-24/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/anmolpunj-24"
+                    },
+                    {
+                      "k": "id",
+                      "v": 100954180.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "anmolpunj-24"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDOBgRwRA"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/anmolpunj-24/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/anmolpunj-24/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/anmolpunj-24/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/anmolpunj-24/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/anmolpunj-24/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/anmolpunj-24"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "anmolpunj-24/formix/.github/workflows/deploy.yml@refs/heads/master"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "96780f2200aa07a29c47b6c97c9a0508867e7f3b"
+        },
+        {
+          "k": "repository_id",
+          "v": "1232821491"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "anmolpunj-24"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "job": {
+      "t": 2,
+      "d": [
+        {
+          "k": "check_run_id",
+          "v": 80111162548.0
+        },
+        {
+          "k": "workflow_ref",
+          "v": "anmolpunj-24/formix/.github/workflows/deploy.yml@refs/heads/master"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "96780f2200aa07a29c47b6c97c9a0508867e7f3b"
+        },
+        {
+          "k": "workflow_repository",
+          "v": "anmolpunj-24/formix"
+        },
+        {
+          "k": "workflow_file_path",
+          "v": ".github/workflows/deploy.yml"
+        }
+      ]
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDOBgRwRA"
+}
+[2026-06-08 13:53:37Z INFO JobRunner] Job ID f29d1e27-4b4a-59e4-b30f-20fdcac90d89
+[2026-06-08 13:53:37Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\anmol\Documents\formix\actions-runner\bin\Runner.Worker.dll
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO ConfigurationStore] binPath: C:\Users\anmol\Documents\formix\actions-runner\bin
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO ConfigurationStore] RootFolder: C:\Users\anmol\Documents\formix\actions-runner
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known config file 'Runner': 'C:\Users\anmol\Documents\formix\actions-runner\.runner'
+[2026-06-08 13:53:37Z INFO ConfigurationStore] ConfigFilePath: C:\Users\anmol\Documents\formix\actions-runner\.runner
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\anmol\Documents\formix\actions-runner\.runner_migrated'
+[2026-06-08 13:53:37Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\anmol\Documents\formix\actions-runner\.runner_migrated
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\anmol\Documents\formix\actions-runner\.credentials'
+[2026-06-08 13:53:37Z INFO ConfigurationStore] CredFilePath: C:\Users\anmol\Documents\formix\actions-runner\.credentials
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\anmol\Documents\formix\actions-runner\.credentials_migrated'
+[2026-06-08 13:53:37Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\anmol\Documents\formix\actions-runner\.credentials_migrated
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known config file 'Service': 'C:\Users\anmol\Documents\formix\actions-runner\.service'
+[2026-06-08 13:53:37Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\anmol\Documents\formix\actions-runner\.service
+[2026-06-08 13:53:37Z INFO ConfigurationStore] Read setting file: 397 chars
+[2026-06-08 13:53:37Z INFO JobRunner] Initializing launch client
+[2026-06-08 13:53:37Z INFO JobServerQueue] Initializing results client
+[2026-06-08 13:53:37Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2026-06-08 13:53:37Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2026-06-08 13:53:37Z INFO JobServerQueue] Start process web console line queue.
+[2026-06-08 13:53:37Z INFO JobServerQueue] Start process file upload queue.
+[2026-06-08 13:53:37Z INFO JobServerQueue] Start results file upload queue.
+[2026-06-08 13:53:37Z INFO JobServerQueue] Starting results-based upload queue...
+[2026-06-08 13:53:37Z INFO JobServerQueue] Start process timeline update queue.
+[2026-06-08 13:53:37Z INFO ExecutionContext] Initializing Job context
+[2026-06-08 13:53:37Z INFO ExecutionContext] Initialize GitHub context
+[2026-06-08 13:53:37Z INFO ExecutionContext] Initialize Env context
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:37Z INFO JobRunner] Starting the job execution context.
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:37Z INFO JobRunner] Validating directory permissions for: 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Tools': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_tool'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:37Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 13:53:38Z INFO JobRunner] Getting job extension.
+[2026-06-08 13:53:38Z INFO JobRunner] Initialize job. Getting all job steps.
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:38Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\anmol\Documents\formix\actions-runner\.credentials'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:38Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\anmol\Documents\formix\actions-runner\.setup_info'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:38Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\anmol\Documents\formix\actions-runner\_work\_PipelineMapping\anmolpunj-24/formix\PipelineFolder.json
+[2026-06-08 13:53:38Z INFO PipelineDirectoryManager] Creating a new tracking config file.
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:38Z INFO PipelineDirectoryManager] Creating pipeline directory.
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:38Z INFO PipelineDirectoryManager] Creating workspace directory.
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:38Z INFO JobExtension] Downloading actions
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:38Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 13:53:38Z INFO Worker] Listening for cancel message from the channel.
+[2026-06-08 13:53:38Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2026-06-08 13:53:39Z INFO ResultServer] Successfully started websocket client.
+[2026-06-08 13:53:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record '5f3f6fa5-066b-4384-9ff3-23307957b63f', success rate: 1/1.
+[2026-06-08 13:53:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record '5f3f6fa5-066b-4384-9ff3-23307957b63f', success rate: 1/1.
+[2026-06-08 13:53:40Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2026-06-08 13:53:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:40Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:40Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 13:53:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:40Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:40Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 13:53:40Z INFO ActionManager] Save archive 'https://codeload.github.com/actions/checkout/zip/34e114876b0b11c390a56381ad16ebd13914f8d5' into C:\Users\anmol\Documents\formix\actions-runner\_work\_actions\_temp_70389de8-a420-44a8-9e7a-3fc8eeba9026\d3ca6e85-d082-4b3f-b040-b9cfc319070b.zip.
+[2026-06-08 13:53:40Z INFO ActionManager] Using Basic token for action archive download.
+[2026-06-08 13:53:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '5f3f6fa5-066b-4384-9ff3-23307957b63f', success rate: 1/1.
+[2026-06-08 13:53:41Z INFO ActionManager] Request URL: https://codeload.github.com/actions/checkout/zip/34e114876b0b11c390a56381ad16ebd13914f8d5 X-GitHub-Request-Id: 5125:2E30A2:BE65:30874:6A26C964 Http Status: OK
+[2026-06-08 13:53:43Z INFO ActionManager] Finished getting action repository.
+[2026-06-08 13:53:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:44Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 13:53:44Z INFO ActionManifestManagerLegacy] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2026-06-08 13:53:44Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2026-06-08 13:53:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:44Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 13:53:45Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-06-08 13:53:45Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 13:53:45Z INFO ActionManager] Load action that reference repository from 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions\actions\checkout\v4'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 13:53:45Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-06-08 13:53:45Z INFO ActionManager] Action pre node.js file: N/A.
+[2026-06-08 13:53:45Z INFO ActionManager] Action node.js file: dist/index.js.
+[2026-06-08 13:53:45Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2026-06-08 13:53:45Z INFO JobExtension] Adding .
+[2026-06-08 13:53:45Z INFO JobExtension] Adding .
+[2026-06-08 13:53:45Z INFO JobExtension] Adding .
+[2026-06-08 13:53:45Z INFO JobExtension] Adding .
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:45Z INFO JobExtension] Total accessible running process: 315.
+[2026-06-08 13:53:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record '5f3f6fa5-066b-4384-9ff3-23307957b63f', success rate: 1/1.
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:45Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:45Z INFO JobExtension] Start checking server connectivity.
+[2026-06-08 13:53:45Z INFO JobExtension] Check server connectivity for https://broker.actions.githubusercontent.com/health.
+[2026-06-08 13:53:45Z INFO JobExtension] Check server connectivity for https://token.actions.githubusercontent.com/ready.
+[2026-06-08 13:53:45Z INFO JobExtension] Check server connectivity for https://run.actions.githubusercontent.com/health.
+[2026-06-08 13:53:45Z INFO JobExtension] Start checking service connectivity in background.
+[2026-06-08 13:53:46Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "5f3f6fa5-066b-4384-9ff3-23307957b63f",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 8,
+  "startTime": "2026-06-08T13:53:38.2828208Z",
+  "finishTime": "2026-06-08T13:53:45.9787364Z"
+}.
+[2026-06-08 13:53:46Z INFO JobRunner] Total job steps: 4.
+[2026-06-08 13:53:46Z INFO JobRunner] Run all job steps.
+[2026-06-08 13:53:46Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-06-08 13:53:46Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\anmol\Documents\formix\actions-runner\_diag\blocks\b2fe93fd-21d8-4ac1-8a14-f7759c67404b_5f3f6fa5-066b-4384-9ff3-23307957b63f.1
+[2026-06-08 13:53:46Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-06-08 13:53:46Z INFO DapDebugger] DapDebugger initialized
+[2026-06-08 13:53:46Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v4'
+[2026-06-08 13:53:46Z INFO StepsRunner] Evaluating: success()
+[2026-06-08 13:53:46Z INFO StepsRunner] Result: true
+[2026-06-08 13:53:46Z INFO StepsRunner] Starting the step.
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:46Z INFO StepsRunner] Which2: 'chcp'
+[2026-06-08 13:53:46Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper] Process started with process id 1912, waiting for process exit.
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 13:53:46Z INFO ProcessInvokerWrapper] Finished process 1912 with exit code 0, and elapsed time 00:00:00.3079138.
+[2026-06-08 13:53:46Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 13:53:46Z INFO ActionManager] Load action that reference repository from 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions\actions\checkout\v4'
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:46Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 13:53:46Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-06-08 13:53:46Z INFO ActionManager] Action pre node.js file: N/A.
+[2026-06-08 13:53:46Z INFO ActionManager] Action node.js file: dist/index.js.
+[2026-06-08 13:53:46Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2026-06-08 13:53:47Z INFO ExecutionContext] Reserve record order 6 to 10 for post job actions.
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 13:53:47Z INFO ExecutionContext] Write event payload to C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_github_workflow\event.json
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:47Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 13:53:47Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-06-08 13:53:47Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "anmolpunj-24/formix"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'ref': default value evaluate result: ""
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'ssh-key': default value evaluate result: ""
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'ssh-known-hosts': default value evaluate result: ""
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'ssh-user': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 51,
+  "col": 14,
+  "lit": "git"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 54,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'path': default value evaluate result: ""
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 59,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": ""
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": ""
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 76,
+  "col": 14,
+  "lit": "1"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "false"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 94,
+  "col": 14,
+  "lit": "false"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 13:53:48Z INFO ActionManifestManagerLegacy] Input 'github-server-url': default value evaluate result: ""
+[2026-06-08 13:53:48Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command error
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command group
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-06-08 13:53:48Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-06-08 13:53:49Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:53:49Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:49Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:49Z INFO HostContext] Well known directory 'Externals': 'C:\Users\anmol\Documents\formix\actions-runner\externals'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\anmol\Documents\formix\actions-runner\externals\node20\bin\node.exe'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\anmol\Documents\formix\actions-runner\_work\_actions\actions\checkout\v4\dist/index.js"'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work\formix\formix'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 13:53:49Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 13:53:54Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2026-06-08 13:53:55Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:53:55Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:53:55Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:53:57Z INFO ProcessInvokerWrapper] Process started with process id 10032, waiting for process exit.
+[2026-06-08 13:53:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:53:57Z INFO AddMaskCommandExtension] Add new secret mask with length of 588
+[2026-06-08 13:53:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:53:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:53:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:53:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:53:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:54:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:54:05Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:54:05Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:54:05Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:54:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:54:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:54:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:54:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:54:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:54:17Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:54:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:54:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:54:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:54:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:54:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:54:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:54:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:54:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:54:36Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:54:45Z INFO JobServerQueue] Stop aggressive process web console line queue.
+[2026-06-08 13:54:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:54:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:54:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:54:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:54:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:54:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:55:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:55:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:55:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:55:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:55:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:55:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:55:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:55:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:55:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:55:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:55:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:55:36Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:55:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:55:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:55:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:55:46Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:46Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:47Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:49Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:50Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:50Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:52Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:52Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:55:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:55:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:55:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:55:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:56:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:56:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e', success rate: 1/1.
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper] Finished process 10032 with exit code 0, and elapsed time 00:02:12.3848802.
+[2026-06-08 13:56:01Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_runner_file_commands\step_summary_3761b03b-9ce0-4f9e-ab5b-7862f9e474f5) is empty; skipping attachment upload
+[2026-06-08 13:56:01Z INFO StepsRunner] Step result: 
+[2026-06-08 13:56:01Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 136,
+  "startTime": "2026-06-08T13:53:46.0960348Z",
+  "finishTime": "2026-06-08T13:56:01.8135751Z"
+}.
+[2026-06-08 13:56:01Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-06-08 13:56:01Z INFO StepsRunner] Current state: job state = ''
+[2026-06-08 13:56:01Z INFO StepsRunner] Processing step: DisplayName='Install Dependencies'
+[2026-06-08 13:56:01Z INFO StepsRunner] Evaluating: success()
+[2026-06-08 13:56:01Z INFO StepsRunner] Result: true
+[2026-06-08 13:56:01Z INFO StepsRunner] Starting the step.
+[2026-06-08 13:56:01Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:01Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:01Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:01Z INFO StepsRunner] Which2: 'chcp'
+[2026-06-08 13:56:01Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 13:56:01Z INFO ProcessInvokerWrapper] Process started with process id 11520, waiting for process exit.
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper] Finished process 11520 with exit code 0, and elapsed time 00:00:00.0786792.
+[2026-06-08 13:56:02Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 13:56:02Z INFO ExecutionContext] Write event payload to C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_github_workflow\event.json
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 13:56:02Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-06-08 13:56:02Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command error
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command group
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-06-08 13:56:02Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-06-08 13:56:02Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-06-08 13:56:02Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2026-06-08 13:56:02Z INFO ScriptHandler] Defaulting to powershell
+[2026-06-08 13:56:02Z INFO ScriptHandler] Which2: 'powershell'
+[2026-06-08 13:56:02Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:02Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 13:56:02Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-06-08 13:56:02Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2026-06-08 13:56:02Z INFO ScriptHandler] Defaulting to powershell
+[2026-06-08 13:56:02Z INFO ScriptHandler] Which2: 'powershell'
+[2026-06-08 13:56:02Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\12f6cdf4-571a-41ff-a708-16faf09cf722.ps1'"'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work\formix\formix'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 13:56:02Z INFO ProcessInvokerWrapper] Process started with process id 30300, waiting for process exit.
+[2026-06-08 13:56:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0724bc0b-f391-474c-b007-6d1474fccfdc', success rate: 1/1.
+[2026-06-08 13:56:02Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-06-08 13:56:02Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\anmol\Documents\formix\actions-runner\_diag\blocks\b2fe93fd-21d8-4ac1-8a14-f7759c67404b_95d44f2b-b2d5-4ca6-84a2-8dfecf023a9e.1
+[2026-06-08 13:56:02Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-06-08 13:56:05Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2026-06-08 13:56:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:36Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:56:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:56:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:56:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:57:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:57:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:57:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:57:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:57:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:57:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:57:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:57:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:57:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:57:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:57:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:57:36Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:57:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:57:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:57:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:57:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:57:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:57:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:58:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:58:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:58:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:58:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:58:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:58:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:58:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:58:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:58:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:58:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:58:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:58:36Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:58:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:58:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:58:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:58:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:58:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:58:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:59:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:59:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:59:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:59:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:59:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:59:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:59:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:59:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:59:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:59:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:59:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:59:36Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:59:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:59:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:59:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 13:59:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 13:59:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 13:59:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:00:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:00:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:00:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:00:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:00:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:00:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:00:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:00:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:00:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:00:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:00:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:00:36Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:00:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:00:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:00:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:00:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:00:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:00:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0724bc0b-f391-474c-b007-6d1474fccfdc', success rate: 1/1.
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper] Finished process 30300 with exit code 0, and elapsed time 00:05:17.4803668.
+[2026-06-08 14:01:19Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_runner_file_commands\step_summary_a42a7f84-f7dd-4b70-896d-4dcca43e4505) is empty; skipping attachment upload
+[2026-06-08 14:01:19Z INFO StepsRunner] Step result: 
+[2026-06-08 14:01:19Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "0724bc0b-f391-474c-b007-6d1474fccfdc",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 318,
+  "startTime": "2026-06-08T13:56:01.8692006Z",
+  "finishTime": "2026-06-08T14:01:19.8336514Z"
+}.
+[2026-06-08 14:01:19Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-06-08 14:01:19Z INFO StepsRunner] Current state: job state = ''
+[2026-06-08 14:01:19Z INFO StepsRunner] Processing step: DisplayName='Build'
+[2026-06-08 14:01:19Z INFO StepsRunner] Evaluating: success()
+[2026-06-08 14:01:19Z INFO StepsRunner] Result: true
+[2026-06-08 14:01:19Z INFO StepsRunner] Starting the step.
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:19Z INFO StepsRunner] Which2: 'chcp'
+[2026-06-08 14:01:19Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper] Process started with process id 19792, waiting for process exit.
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:01:19Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-06-08 14:01:19Z INFO ProcessInvokerWrapper] Finished process 19792 with exit code 0, and elapsed time 00:00:00.0571913.
+[2026-06-08 14:01:19Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-06-08 14:01:19Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\anmol\Documents\formix\actions-runner\_diag\blocks\b2fe93fd-21d8-4ac1-8a14-f7759c67404b_0724bc0b-f391-474c-b007-6d1474fccfdc.1
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0724bc0b-f391-474c-b007-6d1474fccfdc', success rate: 1/1.
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 14:01:19Z INFO ExecutionContext] Write event payload to C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_github_workflow\event.json
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:19Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 14:01:19Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-06-08 14:01:19Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command error
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command group
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-06-08 14:01:19Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-06-08 14:01:19Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-06-08 14:01:20Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2026-06-08 14:01:20Z INFO ScriptHandler] Defaulting to powershell
+[2026-06-08 14:01:20Z INFO ScriptHandler] Which2: 'powershell'
+[2026-06-08 14:01:20Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-06-08 14:01:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:20Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 14:01:20Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-06-08 14:01:20Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2026-06-08 14:01:20Z INFO ScriptHandler] Defaulting to powershell
+[2026-06-08 14:01:20Z INFO ScriptHandler] Which2: 'powershell'
+[2026-06-08 14:01:20Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\417b8746-db89-4686-8edf-2440e20c0db8.ps1'"'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work\formix\formix'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 14:01:20Z INFO ProcessInvokerWrapper] Process started with process id 5696, waiting for process exit.
+[2026-06-08 14:01:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '84dad650-be6f-47ed-b5b8-fbc39fe577e1', success rate: 1/1.
+[2026-06-08 14:01:20Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-06-08 14:01:22Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2026-06-08 14:01:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '84dad650-be6f-47ed-b5b8-fbc39fe577e1', success rate: 1/1.
+[2026-06-08 14:01:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '84dad650-be6f-47ed-b5b8-fbc39fe577e1', success rate: 1/1.
+[2026-06-08 14:01:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:26Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:36Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:36Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:36Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record '84dad650-be6f-47ed-b5b8-fbc39fe577e1', success rate: 1/1.
+[2026-06-08 14:01:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record '84dad650-be6f-47ed-b5b8-fbc39fe577e1', success rate: 1/1.
+[2026-06-08 14:01:46Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:46Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:46Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record '84dad650-be6f-47ed-b5b8-fbc39fe577e1', success rate: 1/1.
+[2026-06-08 14:01:56Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:01:56Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:01:56Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:01:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '84dad650-be6f-47ed-b5b8-fbc39fe577e1', success rate: 1/1.
+[2026-06-08 14:01:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '84dad650-be6f-47ed-b5b8-fbc39fe577e1', success rate: 1/1.
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] Finished process 5696 with exit code 0, and elapsed time 00:00:40.2818520.
+[2026-06-08 14:02:00Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_runner_file_commands\step_summary_a8a57841-8d50-4f03-96b2-3b4d9f2659eb) is empty; skipping attachment upload
+[2026-06-08 14:02:00Z INFO StepsRunner] Step result: 
+[2026-06-08 14:02:00Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "84dad650-be6f-47ed-b5b8-fbc39fe577e1",
+  "stepContextName": "__run_2",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 41,
+  "startTime": "2026-06-08T14:01:19.8415849Z",
+  "finishTime": "2026-06-08T14:02:00.4059031Z"
+}.
+[2026-06-08 14:02:00Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-06-08 14:02:00Z INFO StepsRunner] Current state: job state = ''
+[2026-06-08 14:02:00Z INFO StepsRunner] Processing step: DisplayName='Restart PM2'
+[2026-06-08 14:02:00Z INFO StepsRunner] Evaluating: success()
+[2026-06-08 14:02:00Z INFO StepsRunner] Result: true
+[2026-06-08 14:02:00Z INFO StepsRunner] Starting the step.
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:00Z INFO StepsRunner] Which2: 'chcp'
+[2026-06-08 14:02:00Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] Process started with process id 10156, waiting for process exit.
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] Finished process 10156 with exit code 0, and elapsed time 00:00:00.1352171.
+[2026-06-08 14:02:00Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 14:02:00Z INFO ExecutionContext] Write event payload to C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_github_workflow\event.json
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 14:02:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-06-08 14:02:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command error
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command group
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-06-08 14:02:00Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-06-08 14:02:00Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-06-08 14:02:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'bd6fceb9-73f6-40eb-8697-7c0d81142858', success rate: 1/1.
+[2026-06-08 14:02:00Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2026-06-08 14:02:00Z INFO ScriptHandler] Defaulting to powershell
+[2026-06-08 14:02:00Z INFO ScriptHandler] Which2: 'powershell'
+[2026-06-08 14:02:00Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 14:02:00Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-06-08 14:02:00Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2026-06-08 14:02:00Z INFO ScriptHandler] Defaulting to powershell
+[2026-06-08 14:02:00Z INFO ScriptHandler] Which2: 'powershell'
+[2026-06-08 14:02:00Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\d4985b75-e271-40f0-86c4-5a44b1cd8892.ps1'"'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work\formix\formix'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 14:02:00Z INFO ProcessInvokerWrapper] Process started with process id 10252, waiting for process exit.
+[2026-06-08 14:02:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'bd6fceb9-73f6-40eb-8697-7c0d81142858', success rate: 1/1.
+[2026-06-08 14:02:01Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-06-08 14:02:01Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\anmol\Documents\formix\actions-runner\_diag\blocks\b2fe93fd-21d8-4ac1-8a14-f7759c67404b_84dad650-be6f-47ed-b5b8-fbc39fe577e1.1
+[2026-06-08 14:02:01Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-06-08 14:02:02Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2026-06-08 14:02:03Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'bd6fceb9-73f6-40eb-8697-7c0d81142858', success rate: 1/1.
+[2026-06-08 14:02:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'bd6fceb9-73f6-40eb-8697-7c0d81142858', success rate: 1/1.
+[2026-06-08 14:02:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'bd6fceb9-73f6-40eb-8697-7c0d81142858', success rate: 1/1.
+[2026-06-08 14:02:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'bd6fceb9-73f6-40eb-8697-7c0d81142858', success rate: 1/1.
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper] Finished process 10252 with exit code 0, and elapsed time 00:00:07.2972716.
+[2026-06-08 14:02:07Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_runner_file_commands\step_summary_f48fcce1-23ea-4959-9274-21fa4121d60d) is empty; skipping attachment upload
+[2026-06-08 14:02:07Z INFO StepsRunner] Step result: 
+[2026-06-08 14:02:07Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "bd6fceb9-73f6-40eb-8697-7c0d81142858",
+  "stepContextName": "__run_3",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 8,
+  "startTime": "2026-06-08T14:02:00.4092937Z",
+  "finishTime": "2026-06-08T14:02:07.9750043Z"
+}.
+[2026-06-08 14:02:07Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-06-08 14:02:07Z INFO StepsRunner] Current state: job state = ''
+[2026-06-08 14:02:07Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v4'
+[2026-06-08 14:02:07Z INFO StepsRunner] Evaluating: always()
+[2026-06-08 14:02:07Z INFO StepsRunner] Result: true
+[2026-06-08 14:02:07Z INFO StepsRunner] Starting the step.
+[2026-06-08 14:02:07Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:07Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:07Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:07Z INFO StepsRunner] Which2: 'chcp'
+[2026-06-08 14:02:07Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 14:02:07Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper] Process started with process id 29892, waiting for process exit.
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper] Finished process 29892 with exit code 0, and elapsed time 00:00:00.0733163.
+[2026-06-08 14:02:08Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 14:02:08Z INFO ActionManager] Load action that reference repository from 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions\actions\checkout\v4'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Actions': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_actions'
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-06-08 14:02:08Z INFO ActionManager] Action pre node.js file: N/A.
+[2026-06-08 14:02:08Z INFO ActionManager] Action node.js file: dist/index.js.
+[2026-06-08 14:02:08Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 14:02:08Z INFO ExecutionContext] Write event payload to C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_github_workflow\event.json
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\anmol\Documents\formix\actions-runner\_work\_temp'
+[2026-06-08 14:02:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "anmolpunj-24/formix"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'ref': default value evaluate result: ""
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'ssh-key': default value evaluate result: ""
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'ssh-known-hosts': default value evaluate result: ""
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'ssh-user': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 51,
+  "col": 14,
+  "lit": "git"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 54,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'path': default value evaluate result: ""
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 59,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": ""
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": ""
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 76,
+  "col": 14,
+  "lit": "1"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "false"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 94,
+  "col": 14,
+  "lit": "false"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "true"
+}
+[2026-06-08 14:02:08Z INFO ActionManifestManagerLegacy] Input 'github-server-url': default value evaluate result: ""
+[2026-06-08 14:02:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command error
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command group
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-06-08 14:02:08Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:08Z INFO HostContext] Well known directory 'Externals': 'C:\Users\anmol\Documents\formix\actions-runner\externals'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper] Starting process:
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\anmol\Documents\formix\actions-runner\externals\node20\bin\node.exe'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\anmol\Documents\formix\actions-runner\_work\_actions\actions\checkout\v4\dist/index.js"'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\anmol\Documents\formix\actions-runner\_work\formix\formix'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-06-08 14:02:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a', success rate: 1/1.
+[2026-06-08 14:02:08Z INFO ProcessInvokerWrapper] Process started with process id 16612, waiting for process exit.
+[2026-06-08 14:02:08Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-06-08 14:02:08Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-06-08 14:02:08Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\anmol\Documents\formix\actions-runner\_diag\blocks\b2fe93fd-21d8-4ac1-8a14-f7759c67404b_bd6fceb9-73f6-40eb-8697-7c0d81142858.1
+[2026-06-08 14:02:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a', success rate: 1/1.
+[2026-06-08 14:02:09Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2026-06-08 14:02:09Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2026-06-08 14:02:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a', success rate: 1/1.
+[2026-06-08 14:02:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a', success rate: 1/1.
+[2026-06-08 14:02:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a', success rate: 1/1.
+[2026-06-08 14:02:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a', success rate: 1/1.
+[2026-06-08 14:02:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\anmol\Documents\formix\actions-runner\_work'
+[2026-06-08 14:02:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a', success rate: 1/1.
+[2026-06-08 14:02:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a', success rate: 1/1.
+[2026-06-08 14:02:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-06-08 14:02:22Z INFO ProcessInvokerWrapper] Finished process 16612 with exit code 0, and elapsed time 00:00:14.5861023.
+[2026-06-08 14:02:22Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\anmol\Documents\formix\actions-runner\_work\_temp\_runner_file_commands\step_summary_348a03d4-df80-4d0b-894c-690a502f746f) is empty; skipping attachment upload
+[2026-06-08 14:02:22Z INFO StepsRunner] Step result: 
+[2026-06-08 14:02:22Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Post",
+  "stepId": "aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 15,
+  "startTime": "2026-06-08T14:02:07.9793744Z",
+  "finishTime": "2026-06-08T14:02:22.81422Z"
+}.
+[2026-06-08 14:02:22Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-06-08 14:02:22Z INFO StepsRunner] Current state: job state = ''
+[2026-06-08 14:02:22Z INFO JobRunner] Finalize job.
+[2026-06-08 14:02:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:22Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 14:02:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:22Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 14:02:22Z INFO JobExtension] Initialize Env context
+[2026-06-08 14:02:22Z INFO JobExtension] Initialize steps context
+[2026-06-08 14:02:22Z INFO JobExtension] Total accessible running process: 311.
+[2026-06-08 14:02:22Z INFO JobExtension] Inspecting process environment variables. PID: 6220 (chrome)
+[2026-06-08 14:02:22Z INFO JobExtension] Inspecting process environment variables. PID: 16460 (SearchProtocolHost)
+[2026-06-08 14:02:22Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2026-06-08 14:02:22Z INFO JobExtension] Inspecting process environment variables. PID: 19656 (node)
+[2026-06-08 14:02:22Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-06-08 14:02:22Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\anmol\Documents\formix\actions-runner\_diag\blocks\b2fe93fd-21d8-4ac1-8a14-f7759c67404b_aae2f8ee-9f9e-4aae-9502-fa9540ad0b8a.1
+[2026-06-08 14:02:23Z INFO JobExtension] Inspecting process environment variables. PID: 19376 (SearchFilterHost)
+[2026-06-08 14:02:23Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2026-06-08 14:02:23Z INFO JobExtension] Wait for all connectivity checks to finish.
+[2026-06-08 14:02:23Z INFO JobExtension] Connectivity check result: GitHub.Runner.Worker.JobExtension+CheckResult
+[2026-06-08 14:02:23Z INFO JobExtension] Connectivity check result: GitHub.Runner.Worker.JobExtension+CheckResult
+[2026-06-08 14:02:23Z INFO JobExtension] Connectivity check result: GitHub.Runner.Worker.JobExtension+CheckResult
+[2026-06-08 14:02:23Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "df056c64-6409-44db-aed8-fac373ab1984",
+  "result": "succeeded",
+  "errorMessages": [
+    "Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 16th, 2026. Node.js 20 will be removed from the run"
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-06-08T14:02:22.8355525Z",
+  "finishTime": "2026-06-08T14:02:23.0140252Z"
+}.
+[2026-06-08 14:02:23Z INFO JobRunner] Job result after all job steps finish: Succeeded
+[2026-06-08 14:02:23Z INFO JobRunner] Completing the job execution context.
+[2026-06-08 14:02:23Z INFO JobRunner] Shutting down the job server queue.
+[2026-06-08 14:02:23Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2026-06-08 14:02:24Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2026-06-08 14:02:25Z INFO JobServerQueue] All queue process task stopped.
+[2026-06-08 14:02:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'df056c64-6409-44db-aed8-fac373ab1984', success rate: 1/1.
+[2026-06-08 14:02:25Z INFO JobServerQueue] Web console line queue drained.
+[2026-06-08 14:02:25Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2026-06-08 14:02:25Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2026-06-08 14:02:25Z INFO JobServerQueue] File upload queue drained.
+[2026-06-08 14:02:25Z INFO JobServerQueue] Starting results-based upload queue...
+[2026-06-08 14:02:25Z INFO JobServerQueue] Uploading 2 file(s) in one shot through results service.
+[2026-06-08 14:02:25Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-06-08 14:02:25Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\anmol\Documents\formix\actions-runner\_diag\blocks\b2fe93fd-21d8-4ac1-8a14-f7759c67404b_df056c64-6409-44db-aed8-fac373ab1984.1
+[2026-06-08 14:02:26Z INFO JobServerQueue] Got a job log file to send to results service.
+[2026-06-08 14:02:26Z INFO JobServerQueue] Starting upload of job log file to results service ResultsLog, C:\Users\anmol\Documents\formix\actions-runner\_diag\blocks\b2fe93fd-21d8-4ac1-8a14-f7759c67404b_f29d1e27-4b4a-59e4-b30f-20fdcac90d89.1
+[2026-06-08 14:02:27Z INFO JobServerQueue] Tried to upload 2 file(s) to results, success rate: 2/2.
+[2026-06-08 14:02:27Z INFO JobServerQueue] Results upload queue drained.
+[2026-06-08 14:02:27Z INFO JobServerQueue] Timeline update queue drained.
+[2026-06-08 14:02:27Z INFO JobServerQueue] Disposing job server ...
+[2026-06-08 14:02:27Z INFO JobServerQueue] Disposing results server ...
+[2026-06-08 14:02:27Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2026-06-08 14:02:27Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\anmol\Documents\formix\actions-runner\_work\_temp
+[2026-06-08 14:02:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\anmol\Documents\formix\actions-runner\bin'
+[2026-06-08 14:02:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\anmol\Documents\formix\actions-runner'
+[2026-06-08 14:02:27Z INFO HostContext] Well known directory 'Diag': 'C:\Users\anmol\Documents\formix\actions-runner\_diag'
+[2026-06-08 14:02:27Z INFO HostContext] Well known config file 'Telemetry': 'C:\Users\anmol\Documents\formix\actions-runner\_diag\.telemetry'
+[2026-06-08 14:02:27Z INFO JobRunner] Raising job completed against run service
+[2026-06-08 14:02:28Z INFO Worker] Job completed.
