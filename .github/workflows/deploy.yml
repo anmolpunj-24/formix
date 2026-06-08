@@ -50,3 +50,4 @@ jobs:
       - name: Restart Server
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "pm2 restart formix"
+ 
