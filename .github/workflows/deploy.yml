@@ -24,10 +24,10 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: "unnecessary" # Handled inline via StrictHostKeyChecking=no
           
-      - name: Debug Key
-        run: |
-         ls -la ~/.ssh
-         ssh-keygen -l -f ~/.ssh/id_rsa
+      # - name: Debug Key
+      #   run: |
+      #    ls -la ~/.ssh
+      #    ssh-keygen -l -f ~/.ssh/id_rsa
          
       - name: Debug SSH Host
         run: |
