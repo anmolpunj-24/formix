@@ -17,6 +17,7 @@ import Faqs from "../components/mainComponents/faqs";
 export default function Home() {
   return (
     <>
+      {/* seo component */}
       <Seo />
 
       {/* <ImageCarousel /> */}
