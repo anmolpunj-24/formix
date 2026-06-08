@@ -1,3 +1,59 @@
+# this code runs on ubuntu runner --- ssh configured, using docker container and pm2
+
+# name: Deploy Project
+
+# on:
+#   push:
+#     branches:
+#       - master
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     container:
+#       image: node:24
+#     steps:
+#       - uses: actions/checkout@v4
+      
+#       - run: npm ci
+      
+#       - run: npm run build
+      
+#       # Using a dedicated community action ensures secure, robust SSH key loading
+#       - name: Install SSH Key
+#         uses: shimataro/ssh-key-action@v2
+#         with:
+#           key: ${{ secrets.SSH_PRIVATE_KEY }}
+#           known_hosts: "unnecessary" # Handled inline via StrictHostKeyChecking=no
+          
+#       # - name: Debug Key
+#       #   run: |
+#       #    ls -la ~/.ssh
+#       #    ssh-keygen -l -f ~/.ssh/id_rsa
+         
+#       - name: Debug SSH Host
+#         run: |
+#           echo "HOST=${{ secrets.SSH_HOST }}"
+#           ping -c 4 ${{ secrets.SSH_HOST }} || true
+          
+#       # If your remote target is Windows, we clear the credsStore error before running scripts
+#       # - name: Pre-Configure Remote Docker Credentials
+#       #   run: |
+#       #     ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "powershell -Command \"if (Test-Path ~\.docker\config.json) { \$c = Get-Content ~\.docker\config.json | ConvertFrom-Json; \$c.credsStore = ''; \$c | ConvertTo-Json | Set-Content ~\.docker\config.json } else { New-Item -ItemType Directory -Force -Path ~\.docker; '{\\\"credsStore\\\":\\\"\\\"}' | Set-Content ~\.docker\config.json }\"" || echo "Not a Windows target, skipping."
+
+#       # - name: Create Deploy Directory
+#       #   run: |
+#       #    ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} ^
+#       #    "if not exist C:\Users\anmol\Documents\formix mkdir C:\Users\anmol\Documents\formix"
+
+#       - name: Deploy Project
+#         run: |
+#           scp -o StrictHostKeyChecking=no -r .next public package.json package-lock.json next.config.mjs ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/C:/Users/anmol/Documents/formix
+#       - name: Restart Server
+#         run: |
+#           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "pm2 restart formix"
+ 
+#  this solely runs on self hosted runner on github
 name: Deploy Project
 
 on:
@@ -7,47 +63,16 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    container:
-      image: node:24
+    runs-on: self-hosted
+
     steps:
       - uses: actions/checkout@v4
-      
-      - run: npm ci
-      
-      - run: npm run build
-      
-      # Using a dedicated community action ensures secure, robust SSH key loading
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: "unnecessary" # Handled inline via StrictHostKeyChecking=no
-          
-      # - name: Debug Key
-      #   run: |
-      #    ls -la ~/.ssh
-      #    ssh-keygen -l -f ~/.ssh/id_rsa
-         
-      - name: Debug SSH Host
-        run: |
-          echo "HOST=${{ secrets.SSH_HOST }}"
-          ping -c 4 ${{ secrets.SSH_HOST }} || true
-          
-      # If your remote target is Windows, we clear the credsStore error before running scripts
-      # - name: Pre-Configure Remote Docker Credentials
-      #   run: |
-      #     ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "powershell -Command \"if (Test-Path ~\.docker\config.json) { \$c = Get-Content ~\.docker\config.json | ConvertFrom-Json; \$c.credsStore = ''; \$c | ConvertTo-Json | Set-Content ~\.docker\config.json } else { New-Item -ItemType Directory -Force -Path ~\.docker; '{\\\"credsStore\\\":\\\"\\\"}' | Set-Content ~\.docker\config.json }\"" || echo "Not a Windows target, skipping."
 
-      # - name: Create Deploy Directory
-      #   run: |
-      #    ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} ^
-      #    "if not exist C:\Users\anmol\Documents\formix mkdir C:\Users\anmol\Documents\formix"
+      - name: Install Dependencies
+        run: npm ci
 
-      - name: Deploy Project
-        run: |
-          scp -o StrictHostKeyChecking=no -r .next public package.json package-lock.json next.config.mjs ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/C:/Users/anmol/Documents/formix
-      - name: Restart Server
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "pm2 restart formix"
- 
+      - name: Build
+        run: npm run build
+
+      - name: Restart PM2
+        run: pm2 restart formix

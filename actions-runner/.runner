@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 21,
+  "agentName": "formix-runner",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus22.actions.githubusercontent.com/DFlBhBxhWQ3wssyL8kPGmh4L1I5JyHrPMtxTV6XEyKF60mQIxQ/",
+  "gitHubUrl": "https://github.com/anmolpunj-24/formix",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}
